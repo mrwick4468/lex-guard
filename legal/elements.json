@@ -1,0 +1,42 @@
+{
+ "_note": "Offence elements paraphrased closely from the provision texts in legal_corpus.jsonl. Used for element-level legal reasoning. Author-drafted; to be reviewed by the legal co-author. 'presented_age' elements are judged on the age the other party presented, since the PAN12/Perverted Justice 'children' are adult decoys (attempt doctrine).",
+ "EU-2011/93-6(1)": {"provision": "EU-2011/93-6", "name": "Solicitation of a child to meet for sexual purposes", "elements": [
+   ["adult", "The offender is an adult."],
+   ["ict", "The proposal is made by means of information and communication technology."],
+   ["presented_age", "The other party is, or presents as, a child below the age of sexual consent."],
+   ["proposal_to_meet", "The offender proposes to meet the child."],
+   ["sexual_purpose", "The purpose is to engage in sexual activities with the child or to produce child sexual abuse material."],
+   ["material_acts", "The proposal is followed by material acts leading to the meeting (e.g. fixing time and place, travelling)."]]},
+ "EU-2011/93-6(2)": {"provision": "EU-2011/93-6", "name": "Soliciting a child to provide sexual images of themselves", "elements": [
+   ["adult", "The offender is an adult."],
+   ["ict", "The solicitation is made by means of information and communication technology."],
+   ["presented_age", "The other party is, or presents as, a child below the age of sexual consent."],
+   ["solicits_images", "The offender solicits the child to provide sexual images or video depicting that child."]]},
+ "EU-2011/93-3(2)": {"provision": "EU-2011/93-3", "name": "Causing a child to witness sexual activities", "elements": [
+   ["presented_age", "The other party is, or presents as, a child below the age of sexual consent."],
+   ["causes_witness", "The offender causes the child to witness sexual activities (e.g. by webcam or by sending sexual images/video)."],
+   ["sexual_purpose", "The offender acts for sexual purposes."]]},
+ "US-18-2422(b)": {"provision": "US-18-2422", "name": "Coercion and enticement of a minor", "elements": [
+   ["interstate_facility", "The offender uses the mail or a facility of interstate commerce (the internet counts)."],
+   ["knowing_enticement", "The offender knowingly persuades, induces, entices or coerces, or attempts to."],
+   ["presented_age", "The other party is, or is believed to be, under 18."],
+   ["chargeable_sexual_activity", "The aim is prostitution or sexual activity for which a person could be charged with a criminal offence."]]},
+ "US-18-1470": {"provision": "US-18-1470", "name": "Transfer of obscene material to a minor", "elements": [
+   ["interstate_facility", "The offender uses the mail or a facility of interstate commerce."],
+   ["transfers_obscene", "The offender knowingly transfers, or attempts to transfer, obscene matter to the other party."],
+   ["presented_age_16", "The other party is, or is believed to be, under 16, and the offender knows this."]]},
+ "US-18-2251(a)": {"provision": "US-18-2251", "name": "Sexual exploitation of children (production)", "elements": [
+   ["knowing_enticement", "The offender employs, uses, persuades, induces, entices or coerces a minor."],
+   ["presented_age", "The other party is, or is believed to be, a minor (under 18)."],
+   ["explicit_conduct_for_depiction", "The aim is for the minor to engage in sexually explicit conduct to produce or live-transmit a visual depiction."],
+   ["interstate_facility", "The depiction would be transmitted using a facility of interstate commerce."]]},
+ "VN-CC2015-147": {"provision": "VN-CC2015-147", "name": "Employment of a person under 16 for pornographic purposes", "elements": [
+   ["adult_18", "The offender is aged 18 or over."],
+   ["persuades_entices", "The offender persuades, entices or forces the other party."],
+   ["presented_age_16", "The other party is, or presents as, under 16."],
+   ["pornographic_performance", "The aim is for the other party to participate in or watch a pornographic performance in any shape or form."]]},
+ "VN-CC2015-145": {"provision": "VN-CC2015-145", "name": "Sexual activity with a person aged 13 to under 16", "elements": [
+   ["adult_18", "The offender is aged 18 or over."],
+   ["presented_age_13_16", "The other party is, or presents as, aged 13 to under 16."],
+   ["sexual_activity_completed", "Sexual intercourse or other sexual activity actually took place, or was attempted but not completed for reasons beyond the offender's control (Article 15). Online proposals alone are preparation, which Article 14 does not criminalise for this offence."]]}
+}
