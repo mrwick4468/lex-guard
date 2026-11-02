@@ -1,0 +1,12 @@
+{
+ "_note": "Author-defined reference mapping from observable online behaviour to the provisions that most directly criminalise it, used only to score retrieval and citation. To be reviewed by the legal co-author. Vietnam = Criminal Code 2015 original text (pre-2017 amendment). Empty list = no provision directly covers the behaviour on its own.",
+ "behaviours": {
+  "age_or_identity_probing": {"desc": "asks the child's age, location, school, parents' schedule, or whether anyone else can see the chat", "provisions": []},
+  "trust_and_flattery": {"desc": "compliments, gifts, emotional support, presenting as a friend or partner to build trust", "provisions": []},
+  "secrecy_and_isolation": {"desc": "asks the child to keep the relationship secret, delete messages, or avoid telling parents", "provisions": []},
+  "sexual_talk": {"desc": "sexual questions, sexual descriptions or sexual propositions directed at the child", "provisions": ["US-18-2422"]},
+  "sends_sexual_material": {"desc": "sends or shows sexual images, video, webcam or links to the child", "provisions": ["EU-2011/93-3", "US-18-1470", "VN-CC2015-147"]},
+  "requests_sexual_images": {"desc": "asks the child to send sexual or nude images or to perform on webcam", "provisions": ["EU-2011/93-5", "EU-2011/93-6", "US-18-2251", "US-18-2422", "VN-CC2015-147"]},
+  "proposes_meeting": {"desc": "proposes or arranges an in-person meeting with the child, including time, place or travel", "provisions": ["EU-2011/93-6", "US-18-2422", "VN-CC2015-145"]}
+ }
+}

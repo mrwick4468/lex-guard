@@ -1,0 +1,692 @@
+{
+ "eda": {
+  "pan12_train": {
+   "conversations": 66927,
+   "messages": 903607,
+   "predators": 142,
+   "conversations_with_predator": 2016
+  },
+  "pan12_test": {
+   "conversations": 155128,
+   "messages": 2058781,
+   "predators": 254,
+   "conversations_with_predator": 3737
+  },
+  "koutli": {
+   "predators": 621,
+   "median_long_lines": 168,
+   "overlapping_with_pan12": 204,
+   "unseen": 417
+  }
+ },
+ "n_train_users": 97689,
+ "n_test_users": 218702,
+ "corpus_units": 43,
+ "corpus_by_jur": {
+  "European Union": 27,
+  "United States": 6,
+  "Vietnam": 10
+ },
+ "baselines": {
+  "tfidf_logreg": {
+   "A_precision": 0.8703703703703703,
+   "A_recall": 0.5551181102362205,
+   "A_F05": 0.7815964523281597,
+   "A_ROCAUC": 0.9873972872190417,
+   "Chard_recall": 0.843520782396088,
+   "Chard_decoy_FPR": 0.1980440097799511,
+   "Chard_F05": 0.8163748225272125,
+   "Chard_ROCAUC": 0.8881044470083272
+  },
+  "tfidf_linsvm": {
+   "A_precision": 0.8095238095238095,
+   "A_recall": 0.6692913385826772,
+   "A_F05": 0.7769652650822669,
+   "A_ROCAUC": 0.9862454247746884,
+   "Chard_recall": 0.9070904645476773,
+   "Chard_decoy_FPR": 0.05134474327628362,
+   "Chard_F05": 0.9382903388973192,
+   "Chard_ROCAUC": 0.9792624386511319
+  }
+ },
+ "operating_point": {
+  "T_FLAG": 0.7351446950143391,
+  "T_CLEAR": 0.2781264395324759,
+  "flag_P": 0.9774436090225563,
+  "flag_R": 0.5118110236220472,
+  "flag_F05": 0.8269720101781171,
+  "n_flag": 133,
+  "review_rate": 0.29,
+  "miss": 0.2440944881889764
+ },
+ "split": {
+  "Qwen3-8B": {
+   "0.01": {
+    "alpha": 0.01,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.0017473945807279139,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.9655999999999999,
+    "n_flag": 6.88,
+    "flag_precision": 0.9844508868166498,
+    "n_review": 193.12,
+    "predators_flagged": 0.04871041009489156,
+    "ffr_violation_rate": 0.06,
+    "miss_violation_rate": 1.0
+   },
+   "0.05": {
+    "alpha": 0.05,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.047410508716295346,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.6342,
+    "n_flag": 73.16,
+    "flag_precision": 0.9417843355589716,
+    "n_review": 126.84,
+    "predators_flagged": 0.5380402338055805,
+    "ffr_violation_rate": 0.46,
+    "miss_violation_rate": 1.0
+   },
+   "0.1": {
+    "alpha": 0.1,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.09303808164940026,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.6109,
+    "n_flag": 77.82,
+    "flag_precision": 0.8919987804993654,
+    "n_review": 122.18,
+    "predators_flagged": 0.5418051323201772,
+    "ffr_violation_rate": 0.38,
+    "miss_violation_rate": 1.0
+   }
+  },
+  "Qwen2.5-7B": {
+   "0.01": {
+    "alpha": 0.01,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.0012611484900641528,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.9763000000000001,
+    "n_flag": 4.74,
+    "flag_precision": 0.9845614035087719,
+    "n_review": 195.26,
+    "predators_flagged": 0.03356933343134937,
+    "ffr_violation_rate": 0.04,
+    "miss_violation_rate": 1.0
+   },
+   "0.05": {
+    "alpha": 0.05,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.04586271593040214,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.6677999999999998,
+    "n_flag": 66.44,
+    "flag_precision": 0.9408030121441384,
+    "n_review": 133.56,
+    "predators_flagged": 0.48691798604954634,
+    "ffr_violation_rate": 0.38,
+    "miss_violation_rate": 1.0
+   },
+   "0.1": {
+    "alpha": 0.1,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.09639427771515996,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.6015,
+    "n_flag": 79.7,
+    "flag_precision": 0.8919932976275509,
+    "n_review": 120.3,
+    "predators_flagged": 0.5545031296678211,
+    "ffr_violation_rate": 0.44,
+    "miss_violation_rate": 1.0
+   }
+  },
+  "Granite-3.3-8B": {
+   "0.01": {
+    "alpha": 0.01,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.0010133076799743465,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.9908000000000001,
+    "n_flag": 1.84,
+    "flag_precision": 0.960233918128655,
+    "n_review": 198.16,
+    "predators_flagged": 0.012772626464945978,
+    "ffr_violation_rate": 0.04,
+    "miss_violation_rate": 1.0
+   },
+   "0.05": {
+    "alpha": 0.05,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.04632317231201455,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.8881999999999999,
+    "n_flag": 22.36,
+    "flag_precision": 0.8221549907597364,
+    "n_review": 177.64,
+    "predators_flagged": 0.14187560208362682,
+    "ffr_violation_rate": 0.34,
+    "miss_violation_rate": 1.0
+   },
+   "0.1": {
+    "alpha": 0.1,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.09545644579092524,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.8304999999999998,
+    "n_flag": 33.9,
+    "flag_precision": 0.757075151934194,
+    "n_review": 166.1,
+    "predators_flagged": 0.197215843666289,
+    "ffr_violation_rate": 0.36,
+    "miss_violation_rate": 1.0
+   }
+  },
+  "Mistral-7B-v0.3": {
+   "0.01": {
+    "alpha": 0.01,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.0,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.9895,
+    "n_flag": 2.1,
+    "flag_precision": 1.0,
+    "n_review": 197.9,
+    "predators_flagged": 0.015234035127000882,
+    "ffr_violation_rate": 0.0,
+    "miss_violation_rate": 1.0
+   },
+   "0.05": {
+    "alpha": 0.05,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.003106796116504854,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.9166000000000001,
+    "n_flag": 16.68,
+    "flag_precision": 0.9889655172413794,
+    "n_review": 183.32,
+    "predators_flagged": 0.12794928922401486,
+    "ffr_violation_rate": 0.02,
+    "miss_violation_rate": 1.0
+   },
+   "0.1": {
+    "alpha": 0.1,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.04831885270607971,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.8936999999999999,
+    "n_flag": 21.26,
+    "flag_precision": 0.8639847309892025,
+    "n_review": 178.74,
+    "predators_flagged": 0.13222191853435966,
+    "ffr_violation_rate": 0.32,
+    "miss_violation_rate": 1.0
+   }
+  },
+  "Phi-4-mini": {
+   "0.01": {
+    "alpha": 0.01,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.0004938271604938272,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.988,
+    "n_flag": 2.4,
+    "flag_precision": 0.9833333333333334,
+    "n_review": 197.6,
+    "predators_flagged": 0.017117457351914417,
+    "ffr_violation_rate": 0.02,
+    "miss_violation_rate": 1.0
+   },
+   "0.05": {
+    "alpha": 0.05,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.03943252931616088,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.8893,
+    "n_flag": 22.14,
+    "flag_precision": 0.8443932564147777,
+    "n_review": 177.86,
+    "predators_flagged": 0.14500270867691614,
+    "ffr_violation_rate": 0.28,
+    "miss_violation_rate": 1.0
+   },
+   "0.1": {
+    "alpha": 0.1,
+    "beta": 0.1,
+    "score": "q",
+    "n_splits": 50,
+    "false_flag_rate_innocent_candidates": 0.09369783714558935,
+    "miss_rate_predators": 0.148884590765215,
+    "review_rate_candidates": 0.8584,
+    "n_flag": 28.32,
+    "flag_precision": 0.709309871607171,
+    "n_review": 171.68,
+    "predators_flagged": 0.154539083494221,
+    "ffr_violation_rate": 0.38,
+    "miss_violation_rate": 1.0
+   }
+  }
+ },
+ "E3": {
+  "pairs": 409,
+  "ROCAUC": 0.8290421506327676,
+  "AUPRC": 0.8562569612452591,
+  "at_p05": {
+   "P": 0.5172413793103449,
+   "R": 0.9902200488997555,
+   "F05": 0.5718723524428128,
+   "F1": 0.6795302013422819,
+   "n_flag": 783,
+   "decoy_FPR": 0.9242053789731052
+  },
+  "at_conformal": {
+   "P": 0.5242463958060288,
+   "R": 0.9779951100244498,
+   "F05": 0.5778676683039584,
+   "F1": 0.6825938566552902,
+   "n_flag": 763,
+   "decoy_FPR": 0.8875305623471883,
+   "t": 0.7351446950143391
+  },
+  "stage1_ROCAUC": 0.9792624386511319,
+  "stacked_ROCAUC": 0.9793401521989945,
+  "at_stacked": {
+   "P": 0.9883040935672515,
+   "R": 0.8264058679706602,
+   "F05": 0.9510410804727069,
+   "F1": 0.9001331557922769,
+   "n_flag": 342,
+   "decoy_FPR": 0.009779951100244499,
+   "t": 0.7351446950143391
+  },
+  "refusal_rate": 0.0
+ },
+ "E4": {
+  "5": {
+   "ROCAUC_p": 0.5301050086877691,
+   "ROCAUC_q": 0.2916572234393493,
+   "TPR": 0.0,
+   "FPR": 0.0
+  },
+  "10": {
+   "ROCAUC_p": 0.6051220064969404,
+   "ROCAUC_q": 0.3006723577849966,
+   "TPR": 0.0,
+   "FPR": 0.0
+  },
+  "20": {
+   "ROCAUC_p": 0.7189443730956159,
+   "ROCAUC_q": 0.37291934224773987,
+   "TPR": 0.0,
+   "FPR": 0.0
+  },
+  "40": {
+   "ROCAUC_p": 0.7659338722268388,
+   "ROCAUC_q": 0.5347133036186447,
+   "TPR": 0.004608294930875576,
+   "FPR": 0.0
+  },
+  "80": {
+   "ROCAUC_p": 0.774067638689532,
+   "ROCAUC_q": 0.6677746720052378,
+   "TPR": 0.027649769585253458,
+   "FPR": 0.0
+  },
+  "160": {
+   "ROCAUC_p": 0.773891365112941,
+   "ROCAUC_q": 0.7393165621616178,
+   "TPR": 0.15668202764976957,
+   "FPR": 0.0
+  }
+ },
+ "E5": {
+  "n": 137,
+  "p_full": 0.9628720194073827,
+  "drop_remove_cited": 0.07966596949746017,
+  "drop_remove_random": 0.016195261060553048,
+  "drop_remove_tfidf": 0.027182025509976185,
+  "drop_keep_cited": 0.016329213250100363,
+  "drop_keep_random": 0.293309536015286,
+  "flip_remove_cited": 0.12408759124087591,
+  "flip_remove_random": 0.043795620437956206,
+  "flip_remove_tfidf": 0.051094890510948905,
+  "flip_keep_cited": 0.043795620437956206,
+  "flip_keep_random": 0.3284671532846715
+ },
+ "E5_gt": {
+  "precision": 0.24889931641756458,
+  "users_with_gt_in_context": 87
+ },
+ "E6": {
+  "retrieval_recall_rewrite_hybrid": 0.7323895323895325,
+  "retrieval_recall_rewrite_dense": 0.8272844272844272,
+  "retrieval_recall_plain_hybrid": 0.7765336765336767,
+  "retrieval_recall_plain_dense": 0.6447018447018449,
+  "n_retrieved": 11.0234375,
+  "rag_parse": 1.0,
+  "norag_parse": 1.0,
+  "rag_cite_outside_context": 0.0,
+  "rag_cite_nonexistent": 0.0,
+  "norag_cite_outside_corpus": 0.10673363095238095,
+  "rag_cite_precision": 0.3683352183352183,
+  "rag_cite_recall": 0.6978549978549978,
+  "norag_cite_precision": 0.4965036465036464,
+  "norag_cite_recall": 0.6778206778206779,
+  "n": 128
+ },
+ "E7": {
+  "n_users": 128,
+  "n_true_predators": 125,
+  "verifier_calls": 1556,
+  "verifier_support_rate": 0.20179948586118251,
+  "met_without_valid_evidence": 0.23508771929824562,
+  "element_support": {
+   "EU-2011/93-6(1):adult": 0.1,
+   "EU-2011/93-6(1):ict": 0.16363636363636364,
+   "EU-2011/93-6(1):presented_age": 0.10416666666666667,
+   "EU-2011/93-6(1):proposal_to_meet": 0.4864864864864865,
+   "EU-2011/93-6(1):sexual_purpose": 0.3114754098360656,
+   "EU-2011/93-6(1):material_acts": 0.4,
+   "EU-2011/93-6(2):adult": 0.096,
+   "EU-2011/93-6(2):ict": 0.432,
+   "EU-2011/93-6(2):presented_age": 0.09803921568627451,
+   "EU-2011/93-6(2):solicits_images": 0.13636363636363635,
+   "EU-2011/93-3(2):presented_age": 0.12,
+   "EU-2011/93-3(2):causes_witness": 0.0,
+   "EU-2011/93-3(2):sexual_purpose": 0.017241379310344827,
+   "US-18-2422(b):interstate_facility": 0.064,
+   "US-18-2422(b):knowing_enticement": 0.26881720430107525,
+   "US-18-2422(b):presented_age": 0.34285714285714286,
+   "US-18-2422(b):chargeable_sexual_activity": 0.23076923076923078,
+   "US-18-1470:interstate_facility": 0.064,
+   "US-18-1470:transfers_obscene": 0.17142857142857143,
+   "US-18-1470:presented_age_16": 0.2222222222222222,
+   "US-18-2251(a):knowing_enticement": 0.06666666666666667,
+   "US-18-2251(a):presented_age": 0.038461538461538464,
+   "US-18-2251(a):explicit_conduct_for_depiction": 0.0,
+   "US-18-2251(a):interstate_facility": 0.032,
+   "VN-CC2015-147:adult_18": 0.02608695652173913,
+   "VN-CC2015-147:persuades_entices": 0.3541666666666667,
+   "VN-CC2015-147:presented_age_16": 0.22580645161290322,
+   "VN-CC2015-147:pornographic_performance": 0.14634146341463414,
+   "VN-CC2015-145:adult_18": 0.032,
+   "VN-CC2015-145:presented_age_13_16": 0.21951219512195122,
+   "VN-CC2015-145:sexual_activity_completed": 0.5
+  },
+  "offence_rate_met": {
+   "EU-2011/93-6(1)": 0.04,
+   "EU-2011/93-6(2)": 0.136,
+   "EU-2011/93-3(2)": 0.024,
+   "US-18-2422(b)": 0.12,
+   "US-18-1470": 0.168,
+   "US-18-2251(a)": 0.152,
+   "VN-CC2015-147": 0.08,
+   "VN-CC2015-145": 0.04
+  },
+  "offence_rate_verified": {
+   "EU-2011/93-6(1)": 0.0,
+   "EU-2011/93-6(2)": 0.0,
+   "EU-2011/93-3(2)": 0.0,
+   "US-18-2422(b)": 0.0,
+   "US-18-1470": 0.0,
+   "US-18-2251(a)": 0.0,
+   "VN-CC2015-147": 0.0,
+   "VN-CC2015-145": 0.0
+  },
+  "offence_rate_verified_strict": {
+   "EU-2011/93-6(1)": 0.0,
+   "EU-2011/93-6(2)": 0.0,
+   "EU-2011/93-3(2)": 0.0,
+   "US-18-2422(b)": 0.0,
+   "US-18-1470": 0.0,
+   "US-18-2251(a)": 0.0,
+   "VN-CC2015-147": 0.0,
+   "VN-CC2015-145": 0.0
+  },
+  "innocent_offence_rate_verified": {
+   "EU-2011/93-6(1)": 0.0,
+   "EU-2011/93-6(2)": 0.0,
+   "EU-2011/93-3(2)": 0.0,
+   "US-18-2422(b)": 0.0,
+   "US-18-1470": 0.0,
+   "US-18-2251(a)": 0.0,
+   "VN-CC2015-147": 0.0,
+   "VN-CC2015-145": 0.0
+  },
+  "jurisdiction_any_verified": {
+   "EU": 0.0,
+   "US": 0.0,
+   "VN": 0.0
+  }
+ },
+ "E7_users": 128,
+ "E7_pred_users": 125,
+ "E7_met_claims": 1995,
+ "E7_met_claims_supported": 310,
+ "E7_claims_no_evidence": 469,
+ "E7_partial_offence": {
+  "EU-2011/93-6(1)": 0.392,
+  "EU-2011/93-6(2)": 0.064,
+  "EU-2011/93-3(2)": 0.032,
+  "US-18-2422(b)": 0.328,
+  "US-18-1470": 0.128,
+  "US-18-2251(a)": 0.04,
+  "VN-CC2015-147": 0.2,
+  "VN-CC2015-145": 0.096
+ },
+ "decision_counts": {
+  "pos": [
+   130,
+   62,
+   25
+  ],
+  "neg": [
+   3,
+   54,
+   126
+  ]
+ },
+ "cand_auc_s1": 0.8016418624562464,
+ "p_extreme": 0.8475,
+ "stages_rates": {
+  "friendship_forming": [
+   89.40092165898618,
+   51.91256830601093
+  ],
+  "relationship_forming": [
+   84.7926267281106,
+   38.25136612021858
+  ],
+  "risk_assessment": [
+   16.589861751152075,
+   3.825136612021858
+  ],
+  "exclusivity": [
+   28.57142857142857,
+   9.289617486338798
+  ],
+  "sexual": [
+   40.09216589861751,
+   16.39344262295082
+  ],
+  "meeting_planning": [
+   39.1705069124424,
+   18.579234972677597
+  ]
+ },
+ "behaviours_rates": {
+  "age_or_identity_probing": [
+   21.19815668202765,
+   24.043715846994534
+  ],
+  "trust_and_flattery": [
+   84.7926267281106,
+   38.25136612021858
+  ],
+  "secrecy_and_isolation": [
+   38.70967741935484,
+   12.568306010928962
+  ],
+  "sexual_talk": [
+   32.71889400921659,
+   12.021857923497267
+  ],
+  "sends_sexual_material": [
+   0.9216589861751152,
+   0.546448087431694
+  ],
+  "requests_sexual_images": [
+   32.25806451612903,
+   16.939890710382514
+  ],
+  "proposes_meeting": [
+   53.91705069124424,
+   22.950819672131146
+  ]
+ },
+ "role_rates": {
+  "predator": [
+   85.25345622119815,
+   51.36612021857923
+  ],
+  "child_or_decoy": [
+   6.451612903225806,
+   35.51912568306011
+  ],
+  "bystander": [
+   1.8433179723502304,
+   3.278688524590164
+  ],
+  "None": [
+   6.451612903225806,
+   9.836065573770492
+  ]
+ },
+ "koutli_auc_p": {
+  "Qwen3-8B": 0.8290421506327676,
+  "Qwen2.5-7B": 0.8197703265762399,
+  "Granite-3.3-8B": 0.7302682312994303,
+  "Mistral-7B-v0.3": 0.5208481537054418,
+  "Phi-4-mini": 0.8363860809057813
+ },
+ "cite_top": {
+  "EU-2011/93-6": [
+   115,
+   114
+  ],
+  "VN-CC2015-145": [
+   113,
+   91
+  ],
+  "US-18-2252A": [
+   115,
+   77
+  ],
+  "VN-CC2015-151": [
+   107,
+   75
+  ],
+  "US-18-2251": [
+   100,
+   74
+  ],
+  "VN-CC2015-143": [
+   108,
+   65
+  ],
+  "US-18-2422": [
+   80,
+   77
+  ],
+  "US-18-2256": [
+   91,
+   44
+  ],
+  "EU-2011/93-2": [
+   102,
+   31
+  ],
+  "EU-2011/93-18": [
+   83,
+   41
+  ],
+  "VN-CC2015-144": [
+   54,
+   49
+  ],
+  "EU-2011/93-21": [
+   30,
+   27
+  ],
+  "EU-2011/93-20": [
+   34,
+   21
+  ],
+  "EU-2011/93-23": [
+   31,
+   24
+  ],
+  "US-18-2425": [
+   27,
+   25
+  ],
+  "VN-CC2015-14": [
+   30,
+   20
+  ],
+  "VN-CC2015-147": [
+   18,
+   18
+  ],
+  "EU-2011/93-4": [
+   21,
+   14
+  ],
+  "EU-2011/93-19": [
+   20,
+   15
+  ],
+  "EU-2011/93-10": [
+   26,
+   5
+  ],
+  "EU-2011/93-17": [
+   21,
+   10
+  ],
+  "EU-2011/93-3": [
+   15,
+   13
+  ]
+ },
+ "verifier_extreme": 0.7018348623853211
+}

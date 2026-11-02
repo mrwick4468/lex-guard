@@ -1,0 +1,20 @@
+{
+ "pan12_train": {
+  "conversations": 66927,
+  "messages": 903607,
+  "predators": 142,
+  "conversations_with_predator": 2016
+ },
+ "pan12_test": {
+  "conversations": 155128,
+  "messages": 2058781,
+  "predators": 254,
+  "conversations_with_predator": 3737
+ },
+ "koutli": {
+  "predators": 621,
+  "median_long_lines": 168,
+  "overlapping_with_pan12": 204,
+  "unseen": 417
+ }
+}
